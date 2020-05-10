@@ -1,0 +1,25 @@
+{
+  "command": {
+    "help": {
+      "description": {
+        "help": "view command description",
+        "helpall": "view all command description",
+        "helpsome": "view specific command description"
+      },
+      "parameter": {
+        "name": "<Command Name>"
+      }
+    },
+    "connect": {
+      "description": "connect voice channel"
+    },
+    "format": {
+      "usage": {
+        "name": "**`%s`**",
+        "head": "%s : **%s**",
+        "executor": "!!%s %s -> %s"
+      },
+      "illegal": "This argument is not valid"
+    }
+  }
+}

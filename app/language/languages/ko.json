@@ -1,0 +1,28 @@
+{
+  "command": {
+    "help": {
+      "description": {
+        "help": "명령어의 사용 방법을 보여줍니다",
+        "helpall": "모든 명령어의 사용 방법을 보여줍니다",
+        "helpsome": "특정 명령어의 사용 방법을 보여줍니다"
+      },
+      "parameter": {
+        "name": "<명령어 이름>"
+      }
+    },
+    "test": {
+      "description": "테스트 명령어"
+    },
+    "connect": {
+      "description": "음성 채널에 접속합니다."
+    },
+    "format": {
+      "usage": {
+        "name": "**`%s`**",
+        "head": "%s : **%s**",
+        "executor": "!!%s %s -> %s"
+      },
+      "illegal": "올바른 인자가 아닙니다."
+    }
+  }
+}
