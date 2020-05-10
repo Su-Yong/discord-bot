@@ -1,4 +1,4 @@
-import * as app from './app';
+import app from './app';
 
 import Config, { config } from './app/config';
 

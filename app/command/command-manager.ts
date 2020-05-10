@@ -3,6 +3,7 @@
 import { HelpCommand } from './commands/help-command';
 import { TestCommand } from './commands/test-command';
 import { ConnectCommand } from './commands/connect-command';
+import { LanguageCommand } from './commands/language-command';
 import Command from './command';
 
 /* eslint-enable no-unused-vars */
@@ -10,7 +11,8 @@ import Command from './command';
 const commands = [
   new HelpCommand(),
   new TestCommand(),
-  new ConnectCommand()
+  new ConnectCommand(),
+  new LanguageCommand()
 ];
 
 export function exist (name: string): boolean {

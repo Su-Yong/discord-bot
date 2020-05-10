@@ -13,11 +13,23 @@
     "connect": {
       "description": "connect voice channel"
     },
+    "language": {
+      "description": {
+        "language": "manage bot language",
+        "list": "view all available language",
+        "change": "change bot language"
+      },
+      "output": {
+        "success": "changed bot language",
+        "invalid": "%s is not valid locale",
+        "available": "List of available language: **%s**"
+      }
+    },
     "format": {
       "usage": {
         "name": "**`%s`**",
         "head": "%s : **%s**",
-        "executor": "!!%s %s -> %s"
+        "executor": "!!**`%s`** %s → **%s**"
       },
       "illegal": "This argument is not valid"
     }

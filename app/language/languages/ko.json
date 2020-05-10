@@ -16,11 +16,23 @@
     "connect": {
       "description": "음성 채널에 접속합니다."
     },
+    "language": {
+      "description": {
+        "language": "봇의 언어를 관리합니다.",
+        "list": "사용 가능한 모든 언어를 보여줍니다.",
+        "change": "봇의 언어를 바꿉니다."
+      },
+      "output": {
+        "success": "봇의 언어를 바꾸었습니다.",
+        "invalid": "%s은 유효한 언어가 아닙니다.",
+        "available": "사용 가능한 언어 목록: **%s**"
+      }
+    },
     "format": {
       "usage": {
         "name": "**`%s`**",
         "head": "%s : **%s**",
-        "executor": "!!%s %s -> %s"
+        "executor": "!!**`%s`** %s → **%s**"
       },
       "illegal": "올바른 인자가 아닙니다."
     }

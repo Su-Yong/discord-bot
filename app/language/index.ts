@@ -9,14 +9,35 @@ const list = [
   new Language('ko', ko)
 ];
 
-export function getLocale (locale: string = config.locale): Language {
-  const result = list.filter((e) => e.locale === locale);
+let defaultLocale = config.locale;
 
+export function setDefaultLocale (locale: string) {
+  if (list.some((e) => e.locale === locale)) {
+    defaultLocale = locale;
+  } else throw new Error('cannot find language');
+}
+
+export function getLocale (locale: string = ''): Language {
+  if (locale === '') locale = defaultLocale;
+  console.log(locale);
+
+  const result = list.filter((e) => e.locale === locale);
   if (result.length <= 0) throw new Error('cannot find language');
 
   return result[0];
 }
 
+export function getAll (): Language[] {
+  return list;
+}
+
+export function existLocale (locale: string): boolean {
+  return list.some((language: Language) => language.locale === locale);
+}
+
 export default {
-  getLocale
+  setDefaultLocale,
+  getLocale,
+  getAll,
+  existLocale
 };
