@@ -11,7 +11,7 @@ const language = Language.getLocale();
 
 /* eslint-enable no-unused-vars */
 
-class Command {
+export class Command {
   names: string[];
   description: string;
   permission: Permission;

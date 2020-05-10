@@ -41,7 +41,7 @@ function mergeParameter (parameters: string[]) {
   return result;
 }
 
-function analyze (message: string): { name: string, parameters: Parameter[] } {
+export function analyze (message: string): { name: string, parameters: Parameter[] } {
   let blocks = message.split(/\s/g);
   blocks = blocks.flatMap(e => e.split(/"/g));
   blocks = mergeParameter(blocks);
@@ -52,6 +52,6 @@ function analyze (message: string): { name: string, parameters: Parameter[] } {
   return { name, parameters };
 }
 
-export {
+export default {
   analyze
 };

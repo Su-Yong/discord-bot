@@ -1,4 +1,4 @@
-import { Parameter } from './parameter';
+import Parameter from './parameter';
 import ParameterType from './parameter-type';
 
 export {

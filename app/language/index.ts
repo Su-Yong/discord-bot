@@ -9,7 +9,7 @@ const list = [
   new Language('ko', ko)
 ];
 
-function getLocale (locale: string = config.locale): Language {
+export function getLocale (locale: string = config.locale): Language {
   const result = list.filter((e) => e.locale === locale);
 
   if (result.length <= 0) throw new Error('cannot find language');
@@ -17,6 +17,6 @@ function getLocale (locale: string = config.locale): Language {
   return result[0];
 }
 
-export {
+export default {
   getLocale
 };

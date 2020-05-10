@@ -34,3 +34,5 @@ export class CommandExecutor {
     return new Error('Cannot execute command becuase parameters do not match');
   }
 }
+
+export default CommandExecutor;

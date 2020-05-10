@@ -50,4 +50,5 @@ export class Parameter {
   }
 }
 
+export default Parameter;
 /* eslint-enable no-unused-vars */

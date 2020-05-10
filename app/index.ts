@@ -6,7 +6,7 @@ import { config } from './config';
 
 const client = new Client();
 
-function init () {
+export function init () {
   client.on('ready', () => {
     console.log(`Logged in as ${client.user?.tag}!`);
   });
@@ -22,11 +22,11 @@ function init () {
   });
 }
 
-function start (token: string) {
+export function start (token: string) {
   client.login(token);
 };
 
-export {
+export default {
   init,
   start
 };

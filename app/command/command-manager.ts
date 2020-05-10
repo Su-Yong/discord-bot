@@ -13,7 +13,7 @@ const commands = [
   new ConnectCommand()
 ];
 
-function exist (name: string): boolean {
+export function exist (name: string): boolean {
   return commands.some(
     (command) => command.names.some(
       (commandName: string) => commandName === name
@@ -21,15 +21,15 @@ function exist (name: string): boolean {
   );
 }
 
-function get (name: string): Command {
+export function get (name: string): Command {
   return commands.filter(command => command.names.some((e: string) => e === name))[0];
 }
 
-function getAll (): Command[] {
+export function getAll (): Command[] {
   return commands;
 }
 
-export {
+export default {
   exist,
   get,
   getAll

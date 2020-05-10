@@ -59,3 +59,5 @@ export class HelpCommand extends Command {
     }));
   }
 }
+
+export default HelpCommand;

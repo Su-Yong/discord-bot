@@ -1,4 +1,4 @@
-function merge (...objects: any) {
+export function merge (...objects: any) {
   const isObject = (obj: any) => obj && typeof obj === 'object';
 
   return objects.reduce((prev: any, obj: any) => {
@@ -19,4 +19,6 @@ function merge (...objects: any) {
   }, {});
 }
 
-export default merge;
+export default {
+  merge
+}

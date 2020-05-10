@@ -6,7 +6,7 @@ import { User, Message } from 'discord.js';
 
 /* eslint-enable no-unused-vars */
 
-async function execute (messageObject: Message, message: string): Promise<{ result: any }> {
+export async function execute (messageObject: Message, message: string): Promise<{ result: any }> {
   return new Promise((resolve, reject) => {
     const { name, parameters } = analyze(message);
 
@@ -20,6 +20,6 @@ async function execute (messageObject: Message, message: string): Promise<{ resu
   });
 }
 
-export {
+export default {
   execute
 };

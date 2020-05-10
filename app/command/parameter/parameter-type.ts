@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-enum ParameterType {
+export enum ParameterType {
   NUMBER = 'Number',
   STRING = 'String',
   USER = 'User',

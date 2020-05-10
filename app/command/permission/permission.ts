@@ -5,4 +5,6 @@ export enum Permission {
   OPERATOR,
   ADMIN
 }
+
+export default Permission;
 /* eslint-enable no-unused-vars */

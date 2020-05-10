@@ -32,3 +32,5 @@ export class ConnectCommand extends Command {
     }));
   }
 }
+
+export default ConnectCommand;

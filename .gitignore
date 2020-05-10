@@ -105,3 +105,4 @@ dist
 
 # Custom ignore
 build/
+package-lock.json

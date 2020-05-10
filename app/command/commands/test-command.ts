@@ -57,3 +57,5 @@ export class TestCommand extends Command {
     }));
   }
 }
+
+export default TestCommand;
