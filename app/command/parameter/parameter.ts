@@ -2,7 +2,6 @@
 
 import ParameterType from './parameter-type';
 
-import * as lodash from 'lodash';
 import { User } from 'discord.js';
 
 function defineType (value: any): ParameterType {

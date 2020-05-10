@@ -1,7 +1,8 @@
 import Parameter from './parameter';
-import ParameterType from './parameter-type';
+import ParameterType, { ParameterTypeUtil } from './parameter-type';
 
 export {
   Parameter,
-  ParameterType
+  ParameterType,
+  ParameterTypeUtil
 };

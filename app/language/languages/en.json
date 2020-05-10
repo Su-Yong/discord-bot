@@ -21,5 +21,12 @@
       },
       "illegal": "This argument is not valid"
     }
-  }
+  },
+  "type": {
+    "number": "Number",
+    "string": "String",
+    "user": "User",
+    "raw": "Everthing"
+  },
+  "or": "or"
 }

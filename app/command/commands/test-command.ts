@@ -32,6 +32,11 @@ function test3 (message: Message, user: User) {
   message.channel.send(`${user.username}'s id is ${user.id}`);
 }
 
+function test4 (message: Message, something: any, ...raw: any) {
+  message.channel.send(something);
+  message.channel.send(raw);
+}
+
 export class TestCommand extends Command {
   constructor () {
     super({
@@ -47,12 +52,17 @@ export class TestCommand extends Command {
     }));
     super.registerExecutor(new CommandExecutor({
       executor: test2,
-      shape: [ParameterType.STRING],
+      shape: [ParameterType.STRING | ParameterType.NUMBER],
       description: 'get message object property'
     }));
     super.registerExecutor(new CommandExecutor({
       executor: test3,
       shape: [ParameterType.USER],
+      description: 'input user test'
+    }));
+    super.registerExecutor(new CommandExecutor({
+      executor: test4,
+      shape: [ParameterType.STRING, ParameterType.RAW],
       description: 'input user test'
     }));
   }

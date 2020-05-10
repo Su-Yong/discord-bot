@@ -5,6 +5,10 @@ import { Message } from 'discord.js';
 
 type Executor = (messageData: Message, ...parameters: any[]) => any;
 
+function equalParameter (type1: ParameterType, type2: ParameterType): boolean {
+  return !!(type1 & type2);
+}
+
 export class CommandExecutor {
   executor: Executor;
   shape: ParameterType[];
@@ -20,7 +24,14 @@ export class CommandExecutor {
     const types = parameters.map((parameter: Parameter) => parameter.type);
 
     if (types.length === this.shape.length) {
-      return types.every((type, i) => type === this.shape[i])
+      return types.every((type, i) => equalParameter(type, this.shape[i]))
+    } else {
+      let i = 0;
+      for (const t of this.shape) {
+        if (t === ParameterType.RAW && types[i]) return true;
+        if (!equalParameter(t, types[i])) return false;
+        i++;
+      }
     }
 
     return false;
