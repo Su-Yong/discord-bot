@@ -5,11 +5,7 @@ export enum ParameterType {
   STRING = 'String',
   USER = 'User',
   ANY = 'Any',
-
-  INFINITY_NUMBER = 'InfinityNumber',
-  INFINITY_STRING = 'InfinityString',
-  INFINITY_USER = 'InfinityUser',
-  INFINITY_ANY = 'InfinityAny'
+  RAW = 'Raw',
 }
 
 /* eslint-enable no-unused-vars */
