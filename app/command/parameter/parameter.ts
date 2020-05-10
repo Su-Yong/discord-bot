@@ -24,7 +24,8 @@ function defineValue (value: any, type: ParameterType): any {
     case ParameterType.STRING:
       return value as string;
     case ParameterType.USER:
-      return null; // TODO: new User
+      console.log(value);
+      return value;//client.users.find((user: User) => user.username === value as string);
   }
 }
 

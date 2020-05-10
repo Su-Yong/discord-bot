@@ -16,13 +16,13 @@ const language = Language.getLocale();
 
 function getHelpString (message: Message, command: Command): string {
   const names = command.names.map((name) => language.format('command.format.usage.name', name)).join(' ');
+  
   const head = language.format('command.format.usage.head', names, command.description)
   const executors = command.executors.map((executor) => {
     const shape = executor.shape.map((element) => `<${element.toString()}>`).join(' ');
 
     return language.format('command.format.usage.executor', command.names[0], shape, executor.description);
   });
-  
 
   return head + '\n' + executors.join('\n');
 }
